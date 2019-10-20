@@ -1,4 +1,5 @@
-#pragma once
+#ifndef JURIDICA_H
+#define JURIDICA_H
 
 #include <iostream>
 #include "pessoa.h"
@@ -25,3 +26,6 @@ class Juridica : public Pessoa{
 };
 
 void coleta_juridica();
+
+
+#endif
