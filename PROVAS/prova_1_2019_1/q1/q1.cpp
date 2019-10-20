@@ -1,5 +1,5 @@
 #include <iostream>     // Entrada e saída de dados, cin e cout
-#include <vector>       // Vetor dinamico
+#include <vector>       // Vetor dinâmico
 #include <algorithm>    // Sort 
 
 using namespace std;
@@ -27,7 +27,7 @@ int main(){
     if(palavras[palavras.size()-1].size() == palavras[0].size()){ 
         cout << "Palavras tem a mesma quantidade de letras!" << endl;
     }else{
-    // Se não, plota a primeira posição (menos letras) e a última (mais letrs) 
+    // Se não, plota a primeira posição (menos letras) e a última (mais letras) 
         cout << "Maior: " << palavras[palavras.size()-1] << endl;
         cout << "Menor: " << palavras[0] << endl;
     }
