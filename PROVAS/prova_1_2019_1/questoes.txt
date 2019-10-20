@@ -1,15 +1,20 @@
-1. Faça um programa em C++ que leia três palavras e mostre a palavra com mais caracteres a palavra com menos caracteres ou se todas possuem a mesma quantidade de caracteres.
+1. Faça um programa em C++ que leia três palavras e mostre a palavra com mais caracteres a palavra com menos caracteres ou se todas
+possuem a mesma quantidade de caracteres.
 
-2. Você foi contratado para criar um pequeno sistema de controle de clientes em uma startup a sua tarefa é gerenciar o cadastramento dos novos clientes. Os clientes são divididos em duas categorias: pessoa física e pessoa juridíca. 
+2. Você foi contratado para criar um pequeno sistema de controle de clientes em uma startup a sua tarefa é gerenciar o cadastramento dos
+novos clientes. Os clientes são divididos em duas categorias: pessoa física e pessoa juridíca. 
+
 Todos os clientes possuem os seguintes dados:
 	código
 	nome
 	telefone
 	cep
+	
 Os clientes do tipo pessoa física possuem os seguintes dados:
 	cpf
 	rg
 	data de nascimento
+	
 Os clientes do tipo pessoa jurídica possuem os seguintes dados:
 	cnpj
 	inscrição estadual
@@ -18,7 +23,8 @@ Os clientes do tipo pessoa jurídica possuem os seguintes dados:
 
 Obs.: Os objetos não devem ter valores vazios depois de feito o cadastramento de um cliente.
 
-3. Faça um programa que relacione uma quantidade indefinida de nomes e sobrenomes. Não podem haver sobrenomes repetidos se o usuário tentar cadastrar um sobrenome repetido, deve ser dada opção de sobrescrever ou não o valor cadastrado.
+3. Faça um programa que relacione uma quantidade indefinida de nomes e sobrenomes. Não podem haver sobrenomes repetidos se o usuário
+tentar cadastrar um sobrenome repetido, deve ser dada opção de sobrescrever ou não o valor cadastrado.
 
 Ao final do cadastramento o programa deve exibir todas relações no formato: sobrenome, nome.
 Ex.: 
@@ -32,4 +38,7 @@ Ex.:
 	A média dos valores.
 	A mediana dos valoes.
 
-Mediana é o valor que separa a metade maior e a metade menor de uma amostra, uma população ou uma distribuição de probabilidade. Em termos mais simples, mediana pode ser o valor do meio de um conjunto de dados. No conjunto de dados {1, 3, 3, 6, 7, 8, 9}, por exemplo, a mediana é 6. Se houver um número par de observações, não há um único valor do meio. Então, a mediana é definida como a média dos dois valores do meio. No conjunto de dados {3, 5, 7, 9}, a mediana é  (5+7)/2 = 6.
+Mediana é o valor que separa a metade maior e a metade menor de uma amostra, uma população ou uma distribuição de probabilidade. Em
+termos mais simples, mediana pode ser o valor do meio de um conjunto de dados. No conjunto de dados {1, 3, 3, 6, 7, 8, 9}, por exemplo,
+a mediana é 6. Se houver um número par de observações, não há um único valor do meio. Então, a mediana é definida como a média dos dois
+valores do meio. No conjunto de dados {3, 5, 7, 9}, a mediana é  (5+7)/2 = 6.
