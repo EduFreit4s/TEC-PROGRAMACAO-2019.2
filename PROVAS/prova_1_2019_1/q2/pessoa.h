@@ -1,4 +1,5 @@
-#pragma once
+#ifndef PESSOA_H
+#define PESSOA_H
 
 #include <iostream>
 
@@ -28,3 +29,5 @@ class Pessoa{
         string cep;
 
 };
+
+#endif
