@@ -1,4 +1,5 @@
-#pragma once
+#ifndef REPETIDO_H
+#define REPETIDO_H
 
 #include <vector>
 #include <iostream>
@@ -17,3 +18,5 @@ bool repetido(string sobrenome, vector <string> nomes){
     }
     return key;
 }
+
+#endif
