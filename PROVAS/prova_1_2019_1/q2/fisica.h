@@ -1,4 +1,5 @@
-#pragma once
+#ifndef FISICA_H
+#define FISICA_H
 
 #include <iostream>
 #include "pessoa.h"
@@ -25,3 +26,5 @@ class Fisica : public Pessoa{
 };
 
 void coleta_fisica();
+
+#endif
