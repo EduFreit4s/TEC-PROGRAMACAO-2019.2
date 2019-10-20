@@ -1,10 +1,10 @@
 #include <iostream>
 #include "fisica.h"
-
-Fisica fisica_temp;
-
-
 using namespace std;
+
+Fisica fisica_temp; // Objeto temporário utilizado na função coleta
+
+// TODOS OS SETS <-- Faz a validação. Retorna true se ok ou falso se não tiver ok
 
 bool Fisica::setCpf(string c){
     if(c.size() == 11){
@@ -30,7 +30,7 @@ bool Fisica::setRg(string r){
 
 bool Fisica::setNascimento(int d, int m, int a){
     
-    bool teste = true;
+    bool teste = true; // <-- Gatilho. Se alguma verificação falhar (dia, mes ou ano), Retorna false
 
     if(d >= 1 and d <= 31){
         dia = d;
@@ -59,6 +59,8 @@ bool Fisica::setNascimento(int d, int m, int a){
     return teste;
 }
 
+// TODOS OS GETS <--- Devolve os atributos
+
 string Fisica::getCpf(){
     return cpf;
 }
@@ -80,6 +82,8 @@ string Fisica::getNascimento(){
     return data; 
 }
 
+// COLETA <-- Coleta todas informações necessárias, salva no objeto fisica_temp e em seguida escreve um arquivo txt
+
 void coleta_fisica(){
 
     string temp;
@@ -88,22 +92,25 @@ void coleta_fisica(){
     cout << "Digite o nome: ";
     do{
         getline(cin, temp);
-    }while(!fisica_temp.setNome(temp));
+    }while(!fisica_temp.setNome(temp));     // <-- Usuário fica preso no loop do while até digitar a palavra corretamente
 
     cout << "Digite o codigo: ";
     do{
-        getline(cin, temp);
+        getline(cin, temp);                 // <-- getline(cin, temp) coleta uma frase inteira ignorando espaços
     }while(!fisica_temp.setCodigo(temp));
 
     cout << "Digite o telefone (apenas numeros): ";
     do{
         getline(cin, temp);
-    }while(!fisica_temp.setTelefone(temp));
+    }while(!fisica_temp.setTelefone(temp)); // <-- As funções set devolve um bool que é utilizado no while
+                                            // Se a informação tiver ok, set retorna 1. Mas se o usuário digitar
+                                            // a palavra corretamente, ficaria preso no do while para sempre
+                                            // daí é necessário inverter o retorno. O simbolo "!" faz isso.
 
     cout << "Digite o cep (apenas numeros): ";
     do{
         getline(cin, temp);
-    }while(!fisica_temp.setCep(temp));
+    }while(!fisica_temp.setCep(temp));      // <-- Ao mesmo tempo que faz a validação, o set dentro do while leva os dados para os atributos
         
     cout << "Digite o CPF (apenas numeros): ";
     do{
@@ -129,8 +136,9 @@ void coleta_fisica(){
     }while(!fisica_temp.setNascimento(temp_d, temp_m, temp_a));
 
     ofstream fisica;
-    fisica.open("pessoa_fisica.txt", ios::app);
+    fisica.open("pessoa_fisica.txt", ios::app);     // <-- cria ou escreve em pessoa_fisica.txt. flag ios::app evita que dados anteriores sejam subscrito 
 
+    // Formata dados de texto
     fisica << "Nome: " << fisica_temp.getNome() << endl;
     fisica << "Codigo: " << fisica_temp.getCodigo() << endl;
     fisica << "Telefone: " << fisica_temp.getTelefone() << endl;
@@ -142,7 +150,8 @@ void coleta_fisica(){
     fisica << "_________________________________________________" << endl << endl;
 
     fisica.close();
-    system("cls");
-    cin.ignore();
+    system("cls"); // <-- Limpa a tela a cada ciclo.
+    cin.ignore();   // <-- Necessário, pois após o último enter no trecho cin >> temp_a (linha 134) o \0 (enter) pode ser lido pela
+                    // getline(cin, temp) (linha 94) nos próximos ciclos da função coleta_fisica.
 
 }
