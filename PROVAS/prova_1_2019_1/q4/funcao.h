@@ -1,4 +1,5 @@
-#pragma once
+#ifndef FUNCAO_H
+#define FUNCAO_H
 
 #include <iostream>
 #include <vector>
@@ -31,3 +32,5 @@ float media(vector <float> b){
 
     return media = media/b.size();
 }
+
+#endif
