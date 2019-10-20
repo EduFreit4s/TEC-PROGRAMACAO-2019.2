@@ -1,8 +1,8 @@
 1. Faça um programa em C++ que leia três palavras e mostre a palavra com mais caracteres a palavra com menos caracteres ou se todas
 possuem a mesma quantidade de caracteres.
 
-2. Você foi contratado para criar um pequeno sistema de controle de clientes em uma startup a sua tarefa é gerenciar o cadastramento dos
-novos clientes. Os clientes são divididos em duas categorias: pessoa física e pessoa juridíca. 
+2. Você foi contratado para criar um pequeno sistema de controle de clientes em uma startup a sua tarefa é gerenciar o cadastramento
+dos novos clientes. Os clientes são divididos em duas categorias: pessoa física e pessoa juridíca. 
 
 Todos os clientes possuem os seguintes dados:
 	código
@@ -19,7 +19,9 @@ Os clientes do tipo pessoa jurídica possuem os seguintes dados:
 	cnpj
 	inscrição estadual
 	nome fantasia
-	Utilizando orientação a objetos e herança, crie um programa onde seja possível cadastrar 3 pessoas físicas, 3 pessoas  jurídicas e salvar os dados separadamente em pessoa_fisica.txt e pessoa_juridica.txt, os dados no arquivo não devem ser sobrescritos.
+	
+Utilizando orientação a objetos e herança, crie um programa onde seja possível cadastrar 3 pessoas físicas, 3 pessoas jurídicas
+e salvar os dados separadamente em pessoa_fisica.txt e pessoa_juridica.txt, os dados no arquivo não devem ser sobrescritos.
 
 Obs.: Os objetos não devem ter valores vazios depois de feito o cadastramento de um cliente.
 
