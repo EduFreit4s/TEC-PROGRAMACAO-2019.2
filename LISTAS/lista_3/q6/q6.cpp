@@ -5,12 +5,10 @@ using namespace std;
 
 int main(){
     
-DadosSensor dados;
-   
+    DadosSensor dados(11,12);
     
-dados.dados(10,70);
-dados.printDados();
-    
-    
-return 0;
+    dados.printDados();
+        
+    system("pause");
+    return 0;
 }

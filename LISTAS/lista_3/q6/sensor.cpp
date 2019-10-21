@@ -3,15 +3,28 @@
 
 using namespace std;
 
-int DadosSensor::getValor(){
-return 0;
+DadosSensor::DadosSensor(){
+    valor = 0;
+    frequencia = 0;
 }
-int DadosSensor::getFrequencia(){
-return 0;
+
+DadosSensor::DadosSensor(int val, int fre){
+    valor = val;
+    frequencia = fre;
 }
+
+// ALL GETS
+
+int DadosSensor::getValor(){ return valor; }
+
+int DadosSensor::getFrequencia(){ return frequencia; }
+
+// PRINT
+
 void DadosSensor::printDados(){
-    cout << "O valor é " << valor << " e tem frequência: " << frequencia << endl;
+    cout << "O valor eh: " << valor << " e tem frequencia: " << frequencia << endl;
 }
+
 void DadosSensor::dados(int val, int freq){
     valor = val;
     frequencia = freq;
