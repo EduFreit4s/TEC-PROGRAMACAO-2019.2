@@ -23,5 +23,6 @@ int main(){
         entrada << random << endl;
     }
 
+    system("pause");
     return 0;
 }

@@ -17,5 +17,6 @@ int main(){
         cout << elemento << " ";
     }
 
+    system("pause");
     return 0;
 }

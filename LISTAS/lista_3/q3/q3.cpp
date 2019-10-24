@@ -1,24 +1,16 @@
-#include <fstream>
 #include <iostream>
-#include <vector>
+#include "funcoes.h"
 
 using namespace std;
 
 int main(){
 
-    int valor;
-    vector <int> inteiros;
-    ifstream entrada;
-    entrada.open("input.txt");
+    nome_arquivo("input.txt");
+    abre_arquivo();
+    ler_arquivo();
 
-    while(entrada >> valor){
-        inteiros.push_back(valor);
-    }
-    entrada.close();
+    print();
 
-    for(auto i : inteiros){
-        cout << i << endl;
-    }
-
+    system("pause");
     return 0;
 }
