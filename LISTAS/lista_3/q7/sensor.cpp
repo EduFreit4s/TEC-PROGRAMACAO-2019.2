@@ -22,10 +22,11 @@ int DadosSensor::getFrequencia(){ return frequencia; }
 // PRINT
 
 void DadosSensor::printDados(){
-    cout << "O valor eh: " << valor << " e tem frequencia: " << frequencia << endl;
+    cout << "O valor: " << valor << ", tem frequencia: " << frequencia << endl;
 }
 
 void DadosSensor::dados(int val, int freq){
     valor = val;
     frequencia = freq;
 }
+

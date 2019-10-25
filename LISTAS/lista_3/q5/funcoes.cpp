@@ -29,6 +29,23 @@ void ordena_numeros_lidos(){
 
 void valor_frequencia(){
     for(int i = 0; i < numeros_lidos.size(); i++){
-        cout << "O valor: " << numeros_lidos[i] << " Tem frequencia: " << count(numeros_lidos.begin(),numeros_lidos.end(),numeros_lidos[i]) << endl;
+        int freq_temp = count(numeros_lidos.begin(),numeros_lidos.end(),numeros_lidos[i]);
+        int valor_temp = numeros_lidos[i];
+        if(repetido(valor_temp, i )){
+            cout << "O valor: " << valor_temp << ", tem frequencia: " << freq_temp  << endl;
+        }
     }
+}
+
+bool repetido(int busca, int indice){
+
+    bool key = true;
+
+    for(; indice < numeros_lidos.size(); indice++){
+        if(numeros_lidos[indice + 1] == busca){
+            key = false;
+            break;
+        }
+    }
+    return key;
 }

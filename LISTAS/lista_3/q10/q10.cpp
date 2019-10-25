@@ -17,6 +17,7 @@ int main(){
         cout << temp << endl;
     } 
 
+
     system("pause");
     return 0;
 }

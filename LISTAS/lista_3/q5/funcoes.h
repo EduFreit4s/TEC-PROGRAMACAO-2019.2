@@ -19,4 +19,6 @@ void ordena_numeros_lidos(); // Ordena esse vetor de inteiros
 
 void valor_frequencia();
 
+bool repetido(int a, int i);
+
 #endif

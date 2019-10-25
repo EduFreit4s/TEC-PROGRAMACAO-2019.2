@@ -36,7 +36,10 @@ void cria_objeto(vector <DadosSensor>& a){
         val_temp = numeros_lidos[i]; 
         fre_temp = count(numeros_lidos.begin(),numeros_lidos.end(),numeros_lidos[i]);
 
-        a.push_back(DadosSensor(val_temp, fre_temp)); 
+        if(repetido(a, val_temp)){  // Evita repetição
+            a.push_back(DadosSensor(val_temp, fre_temp)); // Evita repetição
+        }
+
     }
 }
 
@@ -55,4 +58,17 @@ void cria_arquivo(string nome, vector <DadosSensor>& a){
 
 bool ordena(DadosSensor& a, DadosSensor& b){                               
     return a.getFrequencia() > b.getFrequencia();                       
+}
+
+bool repetido(vector <DadosSensor> &a, int b){
+
+    bool key = true;
+
+    for(int i = 0; i < a.size(); i++){
+        if(a[i].getValor() == b){
+            key = false;
+            break;
+        }
+    }
+    return key;
 }

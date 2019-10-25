@@ -25,4 +25,6 @@ void cria_arquivo(string nome, vector <DadosSensor>& a); // Cada objeto é trasn
 
 bool ordena(DadosSensor& a, DadosSensor& b); // Funcao utilizada como parametro de ordenação da class DadosSensor
 
+bool repetido(vector <DadosSensor> &a, int b); // Evita que valores repetidos sejam salvos. Parâmetro é o valor
+
 #endif
