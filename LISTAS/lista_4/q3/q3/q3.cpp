@@ -1,29 +1,30 @@
-#include "agenda.h"
-
+#include <iostream>
+#include <map>
 using namespace std;
+#define KEY "sair"
 
 int main(){
 
-    string nome, key = "sair";
-    map <string, string> telefone;
-    
-    agenda(telefone);
-
+    map <string, string> Lista;
+    string nome, telefone;
+   
     cout << "Digite um nome ou ""sair"" para fechar o programa e exibir a lista!" << endl << endl;
 
     do{
         cout << "Nome: ";
-        cin >> nome;
+        getline(cin, nome);
 
-        if(nome != key){
-            exibe_repetido(nome);
-            if(!nome_repetido(nome)) coleta_telefone(nome);
+        if(nome!=KEY){
+            if(Lista.find(nome) == Lista.end()){
+                cout << "Digite o telefone: ";
+                getline(cin, telefone);
+                Lista[nome] = telefone;
+
+            }else cout << nome << " ja existe!, telefone: " << Lista[nome] << endl;
         }
+    }while(nome!= KEY);
 
-    }while(nome != key);
-
-    cout << endl << "Lista: " << endl << endl;
-    mostra_lista();
+    for(auto elemento : Lista) cout << "Nome: " << elemento.first << ", telefone: " << elemento.second << endl;
 
     return 0;
 }
