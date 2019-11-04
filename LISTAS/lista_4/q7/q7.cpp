@@ -21,7 +21,7 @@ int main(){
         getline(cin, produto);
         if(produto == KEY) break;
 
-        cout << "digite a quantidade (): ";
+        cout << "digite a quantidade: ";
         cin >> quantidade;
         if(quantidade == KEY2) break;
 
@@ -46,13 +46,13 @@ int main(){
     for(auto i : fatura){
         total += fatura[i.first]["quantidade"];
         media = (media+(fatura[i.first]["valor"]*fatura[i.first]["quantidade"]))/key;
-        valor += fatura[i.first]["valor"];
+        valor += fatura[i.first]["valor"]*fatura[i.first]["quantidade"];
         key++;
     }
 
     for(auto i : fatura){
-        if(fatura[i.first]["valor"] < menor) menor = fatura[i.first]["valor"];
-        if(fatura[i.first]["valor"] > maior) maior = fatura[i.first]["valor"];
+        if(fatura[i.first]["valor"] < menor) menor = fatura[i.first]["valor"]*fatura[i.first]["valor"];
+        if(fatura[i.first]["valor"] > maior) maior = fatura[i.first]["valor"]*fatura[i.first]["valor"];
     }
 
 
@@ -60,8 +60,8 @@ int main(){
     
     
     for(auto k : fatura){
-        if(fatura[k.first]["valor"] == menor){
-            cout << "Menor preco: " << k.first << ", valor: " << fatura[k.first]["valor"] << endl;
+        if((fatura[k.first]["valor"]*fatura[k.first]["valor"]) == menor){
+            cout << "Menor preco total: " << k.first << ", total: " << fatura[k.first]["valor"]*fatura[k.first]["valor"] << endl;
             break;
         }
     }
@@ -69,8 +69,8 @@ int main(){
 
 
     for(auto k : fatura){
-        if(fatura[k.first]["valor"] == maior){
-            cout << "Maior preco: " << k.first << ", valor: " << fatura[k.first]["valor"] << endl;
+        if((fatura[k.first]["valor"]*fatura[k.first]["valor"]) == maior){
+            cout << "Maior preco total: " << k.first << ", total: " << fatura[k.first]["valor"]*fatura[k.first]["valor"] << endl;
             break;
         }
     }
