@@ -1,0 +1,15 @@
+aviao
+mestre
+chave
+espelho
+luz
+fio
+escada
+cumbuca
+musica
+carro
+buraco
+laser
+vanessa
+numero
+c++
