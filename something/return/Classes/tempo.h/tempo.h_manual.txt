@@ -1,0 +1,12 @@
+tempo.h
+
+getDia() -> retorna dia atual da máquina (int)
+getMes() -> retorna mes atual da máquina (int)
+getAno() -> retorna ano atual da máquina (int)
+
+getSegundo() -> retorna segundo atual da máquina (int)
+getMinuto() -> retorna minuto atual da máquina (int)
+getHora() -> retorna hora atual da máquina (int)
+
+getData() -> retorna data atual da máquina no formato (dd/mm/aaaa) (string)
+getTempo() -> -> retorna hora atual da máquina no formato (hh:mm:ss) (string)
