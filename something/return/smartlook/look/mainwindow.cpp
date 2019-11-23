@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QVector>
+
 
 #include "tempo.h"
 #include "peca.h"
@@ -28,20 +28,18 @@ void MainWindow::on_btnCadastro_clicked()
     roupa.setCor(ui->inputCor->currentText());
     roupa.setTamanho(ui->inputTamanho->text());
 
+    ui->inputNome -> clear();
+    ui->inputTamanho -> clear();
 
     int quantidade_linhas = ui->tabela->rowCount();
 
     if(roupa.getNome().size() != 0){
 
-        criaCloset(roupa);
+        roupas.inserirRoupa(roupa);
         ui->tabela->insertRow(quantidade_linhas);
         inserirNaTabela(roupa,quantidade_linhas);
     }
 
-    ui->inputNome -> clear();
-
-
-    ui->inputTamanho -> clear();
 
 
 }
@@ -61,22 +59,41 @@ void MainWindow::on_btnOrdenar_activated(const QString &arg1)
 
     if(arg1 == "Nome"){
 
-        ordenarPorNome();
+        roupas.ordenarPorNome();
 
-        for(int i=0; i<Peca.size();i++) inserirNaTabela(Peca[i],i);
+        for(int i=0; i<roupas.size();i++) inserirNaTabela(roupas[i],i);
 
     }else if( arg1 == "Tipo"){
 
-        ordenarPorTipo();
-        for(int i=0; i<Peca.size();i++) inserirNaTabela(Peca[i],i);
+        roupas.ordenarPorTipo();
+        for(int i=0; i<roupas.size();i++) inserirNaTabela(roupas[i],i);
 
     }else if( arg1 == "Cor"){
 
-        ordenarPorCor();
-        for(int i=0; i<Peca.size();i++) inserirNaTabela(Peca[i],i);
+        roupas.ordenarPorCor();
+        for(int i=0; i<roupas.size();i++) inserirNaTabela(roupas[i],i);
     }else{
-        ordenarPorTamanho();
-        for(int i=0; i<Peca.size();i++) inserirNaTabela(Peca[i],i);
+        roupas.ordenarPorTamanho();
+        for(int i=0; i<roupas.size();i++) inserirNaTabela(roupas[i],i);
     }
 
+}
+
+void MainWindow::on_actionSalvar_triggered()
+{
+    QString filename;
+    filename = QFileDialog::getSaveFileName(this,"Salvar Arquivo","","*.csv");
+    roupas.salvarDados(filename);
+}
+
+void MainWindow::on_actionCarregar_triggered()
+{
+    QString filename;
+    filename = QFileDialog::getOpenFileName(this, "Abrir Arquivo","","*.csv");
+    roupas.carregarDados(filename);
+
+    for(int i=0;i<roupas.size();i++){
+        ui->tabela->insertRow(i);
+        inserirNaTabela(roupas[i],i);
+    }
 }

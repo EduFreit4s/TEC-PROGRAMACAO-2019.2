@@ -8,6 +8,10 @@
 #include "tempo.h"
 #include "closet.h"
 #include "peca.h"
+#include <QVector>
+#include <QFileDialog>
+
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,11 +27,14 @@ public:
 
 private slots:
     void on_btnCadastro_clicked();
-    void inserirNaTabela(Closet a, int linha);
-
     void on_btnOrdenar_activated(const QString &arg1);
+
+    void on_actionSalvar_triggered();
+    void on_actionCarregar_triggered();
 
 private:
     Ui::MainWindow *ui;
+    Peca roupas;
+    void inserirNaTabela(Closet a, int linha);
 };
 #endif // MAINWINDOW_H

@@ -2,18 +2,35 @@
 #define PECA_H
 
 #include <QVector>
-#include "closet.h"
 #include <algorithm>
+#include <QFile>
+#include <QStringList>
+#include <QDebug>
+#include "closet.h"
 
+class Peca{
 
-    QVector <Closet> Peca;
+private:
 
+        QVector <Closet> roupas;
 
-    void criaCloset(Closet a);
+public:
+    Peca();
 
     void ordenarPorTipo();
     void ordenarPorNome();
     void ordenarPorCor();
     void ordenarPorTamanho();
+
+    void inserirRoupa(Closet a);
+
+    int size();
+    Closet operator[](int indice);
+
+
+    void salvarDados(QString file);
+    void carregarDados(QString file);
+};
+
 
 #endif // PECA_H

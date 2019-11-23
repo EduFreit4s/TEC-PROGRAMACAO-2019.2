@@ -1,34 +1,91 @@
 #include "peca.h"
 
-void ordenarPorNome()
+
+Peca::Peca(){}
+
+void Peca::inserirRoupa(Closet a){
+    roupas.push_back(a);
+}
+
+void Peca::ordenarPorNome()
 {
-    std::sort(Peca.begin(),Peca.end(),[](Closet a, Closet b){
+    std::sort(roupas.begin(),roupas.end(),[](Closet a, Closet b){
         return a.getNome()<b.getNome();
     });
 }
 
-void ordenarPorTipo()
+int Peca::size()
 {
-    std::sort(Peca.begin(),Peca.end(),[](Closet a, Closet b){
+    return roupas.size();
+}
+
+Closet Peca::operator[](int indice)
+{
+    return roupas[indice];
+}
+
+
+void Peca::salvarDados(QString file)
+{
+    QFile arquivo(file);
+
+    arquivo.open(QIODevice::WriteOnly);
+
+    for(auto a : roupas){
+        QString linha = a.getNome() + ";" + a.getCor() + ";" + a.getTipo() + ";" + a.getTamanho()+"\n";
+        arquivo.write(linha.toLocal8Bit());
+    }
+    arquivo.close();
+}
+
+
+
+
+
+void Peca::ordenarPorTipo()
+{
+    std::sort(roupas.begin(),roupas.end(),[](Closet a, Closet b){
         return a.getTipo()<b.getTipo();
     });
 }
 
-void ordenarPorCor()
+void Peca::ordenarPorCor()
 {
-    std::sort(Peca.begin(),Peca.end(),[](Closet a, Closet b){
+    std::sort(roupas.begin(),roupas.end(),[](Closet a, Closet b){
         return a.getCor()<b.getCor();
     });
 }
 
-void ordenarPorTamanho()
+void Peca::ordenarPorTamanho()
 {
-    std::sort(Peca.begin(),Peca.end(),[](Closet a, Closet b){
+    std::sort(roupas.begin(),roupas.end(),[](Closet a, Closet b){
         return a.getTamanho()<b.getTamanho();
     });
 }
 
-void criaCloset(Closet a)
+
+
+
+void Peca::carregarDados(QString file)
 {
-    Peca.push_back(a);
+    QFile arquivo(file);
+    arquivo.open(QIODevice::ReadOnly);
+
+    QString linha;
+    QStringList dados;
+    while(!arquivo.atEnd()){
+        Closet temp;
+        linha = arquivo.readLine();
+        dados = linha.split(";");
+        temp.setNome(dados[0]);
+        temp.setCor(dados[1]);
+        temp.setTipo(dados[2]);
+        temp.setTamanho(dados[3]);
+        inserirRoupa(temp);
+    }
+    arquivo.close();
 }
+
+
+
+
