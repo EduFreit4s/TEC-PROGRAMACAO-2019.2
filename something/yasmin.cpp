@@ -1,53 +1,61 @@
 #include <iostream>
 #include <vector>
+#include <time.h>
 using namespace std;
 
-void pesquisa(vector<int> v, int tentativa);
+void pesquisa(vector<int>, int);
 
 int main()
 {
-    vector<int> v;
-    int n, temp, x, a, b;
-    
-    cout << "digite a quantidade de numeros: ";
-    cin >> n;
+    vector<int> numeros, tentativas;
+    int input;
 
-    while (n > 0){
-        n--;
-        cout << "digite o " << "(" << n+1 << ") numero: ";
-        cin >> temp;
-        v.push_back(temp);
+    clock_t tempo[2]; // armazena o tempo
+    tempo[0] = clock(); // começa conta o tempo
+
+    cout << "digite a quantidade de numeros: ";
+    cin >> input;
+
+    for(int i = 0, x = input; i < x; i++){
+        cout << "digite o " << "(" << i+1 << ") numero: ";
+        cin >> input;
+        numeros.push_back(input);
     }
 
     cout << endl << "digite a quantidade de tentativas: ";
-    cin >> x;
+    cin >> input;
 
-    while (x > 0) {
-        x--;
-        cout << "digite um numero: ";
-        cin >> a;
-        pesquisa(v, a);
+    for(int i = 0, x = input; i < x; i++){
+        cout << "tentativa (" << i+1 << "): ";
+        cin >> input;
+        pesquisa(numeros, input);    
     }
+
+    tempo[1] = clock(); // para de contar o tempo
+    double Tempo = (tempo[1] - tempo[0]) * 1000.0 / CLOCKS_PER_SEC; // faz os calculos em milisegundos
+    cout << endl << endl << "Tempo gasto em ms: " << Tempo; // printa o tempo
 
     return 0;
 }
 
-void pesquisa(vector<int> v, int tentativa) {
+void pesquisa(vector<int> numeros, int tentativa) {
     
     bool ok = false;
-    int pos, maior = -2147483648;
+    int pos, temp = tentativa;
     
-    for(int i = 0; i < v.size(); i++){
-        if(v[i] > maior){
-            maior = v[i];
-            pos = i;
-        }else if(v[i] == tentativa){
+    for(int i = 0; i < numeros.size(); i++){
+        
+        if(tentativa == numeros[i]){
             ok = true;
             pos = i; 
             break;
         }
+
+        if(numeros[i] > temp){
+            temp = numeros[i];
+            pos = i;
+        }
     }
 
     (ok) ? cout << "Yes " << pos+1 << endl : cout << "No " << pos+1 << endl;
-
 }
