@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/img"/>
+    <qresource prefix="/">
+        <file>img/back.png</file>
+        <file>img/btn_a.png</file>
+        <file>img/btn_b.png</file>
+        <file>img/btn_random.png</file>
+        <file>img/c.png</file>
+        <file>img/edu.png</file>
+        <file>img/p.png</file>
+        <file>img/smb_coin.wav</file>
+        <file>img/t.png</file>
+        <file>img/wall.jpg</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>cadastro</class>
+ <widget class="QDialog" name="cadastro">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>304</width>
+    <height>152</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cadastrar uma nova peça</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>281</width>
+     <height>129</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLineEdit" name="btnNome">
+      <property name="placeholderText">
+       <string>Nome:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QComboBox" name="btnPeca">
+        <item>
+         <property name="text">
+          <string>Selecione uma peça</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Camisa</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Camiseta</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Blusa</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Jeans</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Bermuda</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Shortinho</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Saia</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tenis</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Sapatenis</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Chinelo</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="btnCor">
+        <item>
+         <property name="text">
+          <string>Selecione uma cor</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Preto</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Branco</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Cinza</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Vinho</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Vermelho</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Azul</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Verde</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Marrom</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Laranja</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLineEdit" name="btnTamanho">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Tamanho:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnImagem">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(85, 170, 255);</string>
+        </property>
+        <property name="text">
+         <string>Selecionar imagem</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnCadastrar">
+      <property name="text">
+       <string>Cadastrar!</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
