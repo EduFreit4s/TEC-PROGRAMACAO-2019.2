@@ -1,6 +1,6 @@
 # SmartLook!
 
-![SmartLook](https://github.com/EduFreit4s/SmartLook/blob/master/screenshot/main.png)
+![SmartLook](https://github.com/EduFreit4s/Tecnicas-de-Program/blob/master/something/SmartLook-master/screenshot/main.png)
 
 Bem vindo ao seu guarda roupa virtual!
 
@@ -11,7 +11,7 @@ Com este programa é possível  cadastrar novas peças, visualizar estatísticas
 
 No menu principal, clique no botão *"novo"* (segunda opção).  Após ter feito isto, uma caixa de dialogo irá surgir na sua tela:
 
-![Tela de cadastramento](https://github.com/EduFreit4s/SmartLook/blob/master/screenshot/new.png) 
+![Tela de cadastramento](https://github.com/EduFreit4s/Tecnicas-de-Program/blob/master/something/SmartLook-master/screenshot/new.png) 
 
 É necessário preencher todos os campos!
 
@@ -24,7 +24,7 @@ Calma que ainda não acabou! No pequeno botão azul você irá escolher uma foto
 
 No menu principal, selecione o botão *"guarda roupa"*
 
-![Seu closet virtual](https://github.com/EduFreit4s/SmartLook/blob/master/screenshot/closet.png)
+![Seu closet virtual](https://github.com/EduFreit4s/Tecnicas-de-Program/blob/master/something/SmartLook-master/screenshot/closet.png)
 
 É possível navegar pelo seu guarda roupa clicando nos botões azuis ao lado!
 Abaixo existe três botões extras. O *menu* volta para tela principal, *Selecione para apagar* pergunta se você deseja apagar alguma das peças visualizadas no momento e o terceiro botão pergunta se você quer editar alguma das peças que estão na tela.
@@ -33,14 +33,14 @@ Abaixo existe três botões extras. O *menu* volta para tela principal, *Selecio
 
 O terceiro botão do menu te traz uma série de informações sobre seu closet virtual
 
-![É possível descobrir quantas combinações dá pra fazer!](https://github.com/EduFreit4s/SmartLook/blob/master/screenshot/stats.png)
+![É possível descobrir quantas combinações dá pra fazer!](https://github.com/EduFreit4s/Tecnicas-de-Program/blob/master/something/SmartLook-master/screenshot/stats.png)
 
 O sistema mostra quantas combinações de looks são possíveis, cor mais comum e muito mais. Legal, né?
 
 
 ## Combine!
 
-![Match!](https://github.com/EduFreit4s/SmartLook/blob/master/screenshot/match.png)
+![Match!](https://github.com/EduFreit4s/Tecnicas-de-Program/blob/master/something/SmartLook-master/screenshot/match.png)
 
 Essa função é minha favorita, ela é foi feita para pessoas que ficam na dúvida sobre o que vão vestir para sair. Basta clicar no botão *combine* que o sistema irá sortear um look exclusivo para você. Perfeito!
 
@@ -48,7 +48,7 @@ Essa função é minha favorita, ela é foi feita para pessoas que ficam na dúv
 
 No canto superior esquerdo da janela se encontra uma barra de opções.
 
-![Opções do programa](https://github.com/EduFreit4s/SmartLook/blob/master/screenshot/about.png)
+![Opções do programa](https://github.com/EduFreit4s/Tecnicas-de-Program/blob/master/something/SmartLook-master/screenshot/about.png)
 
 Ao clicar em *salvar*, o aplicativo pergunta em qual pasta você deseja fazer isso. Entretanto, este programa conta com sistema exclusivo de salvamento automático para você não *perder nada!
 
